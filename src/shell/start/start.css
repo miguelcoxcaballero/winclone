@@ -10,8 +10,8 @@
   z-index: 45000;
   color: var(--text-primary);
   background: var(--acrylic-shell);
-  backdrop-filter: blur(60px) saturate(170%);
   -webkit-backdrop-filter: blur(60px) saturate(170%);
+  backdrop-filter: blur(60px) saturate(170%);
   border: 1px solid var(--surface-stroke-flyout);
   border-radius: var(--r-overlay);
   box-shadow: var(--shadow-flyout), 0 32px 64px rgba(0, 0, 0, 0.14);

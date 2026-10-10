@@ -135,3 +135,7 @@ login and sleep screens.
 * `node scripts/shot.mjs "app=calculator&theme=dark" out.png --port 5173`
   takes a Playwright screenshot of a running dev server.
 * `window.wc` exposes the stores in the browser console.
+
+## Acrylic CSS compatibility
+
+Declare `-webkit-backdrop-filter` before `backdrop-filter`, with the same value. The CSS optimizer can collapse the pair to the final declaration; placing the standard declaration last preserves blur in current Chrome and Edge. Browser verification checks the rendered Start material in the compiled portable HTML.

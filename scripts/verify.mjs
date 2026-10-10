@@ -43,7 +43,10 @@ try {
   await test('Normal boot, lock screen and sign-in', async () => {
     await page.goto(url()); await page.getByRole('button', { name: 'Unlock desktop' }).waitFor({ state: 'visible' });
     await page.getByRole('button', { name: 'Unlock desktop' }).click(); await button(page, 'Sign in').click(); await page.locator('.phase-desktop').waitFor();
-    await page.getByRole('button', { name: 'Start', exact: true }).click(); await page.locator('.sm').waitFor({state:'visible'}); await page.keyboard.press('Escape');
+    await page.getByRole('button', { name: 'Start', exact: true }).click(); await page.locator('.sm').waitFor({state:'visible'});
+    assert.match(await page.locator('.sm').evaluate(el => getComputedStyle(el).backdropFilter), /blur\(/, 'Start keeps its acrylic blur in the compiled build');
+    await page.waitForFunction(() => [...document.images].every(img => img.complete && img.naturalWidth > 0));
+    await page.keyboard.press('Escape');
   });
   for (const id of ['explorer','edge','store','settings','notepad','calculator','paint','photos','mediaplayer','clock','terminal','camera','weather','taskmgr','snippingtool','todo','mail','calendar','winver']) {
     await test(`Open ${id}`, async () => { await launch(id); assert(!await page.getByText('Temporary body used').count()); });
