@@ -5,6 +5,7 @@ import { App } from './shell/App';
 import { useShell } from './core/store/shell';
 import { useSettings } from './core/store/settings';
 import { useWindows } from './core/store/windows';
+import { ensureEngine } from './apps/clock/store';
 
 // Developer / screenshot helpers:
 //   ?reset=1        clear persisted state
@@ -22,6 +23,7 @@ if (theme === 'dark' || theme === 'light') useSettings.getState().set({ theme, a
 if (params.get('skip') || params.get('app')) useShell.getState().setPhase('desktop');
 
 createRoot(document.getElementById('root')!).render(<App />);
+ensureEngine();
 
 const apps = params.get('app');
 if (apps) {

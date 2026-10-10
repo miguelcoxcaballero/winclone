@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { assetUrl } from '../assets';
 
 /**
  * A tiny persistent virtual file system.
@@ -91,11 +92,11 @@ function seed(): Record<string, FSNode> {
   ];
   const pics = ['flow-light', 'flow-dark', 'glow', 'aurora', 'dune', 'lagoon', 'ember', 'mist'];
   pics.forEach((p, i) => {
-    nodes.push(n(`wp-${p}`, `img${i}.jpg`, 'wallpaperdir', { type: 'file', content: `${base}wallpapers/${p}.jpg`, size: 400_000 + i * 37_123 }));
+    nodes.push(n(`wp-${p}`, `img${i}.jpg`, 'wallpaperdir', { type: 'file', content: assetUrl(`${base}wallpapers/${p}.jpg`), size: 400_000 + i * 37_123 }));
   });
   ['dune', 'lagoon', 'aurora', 'lock-coast', 'lock-ridge'].forEach((p, i) => {
     nodes.push(n(`pic-${p}`, `IMG_2026100${i + 1}_0${i + 8}1532.jpg`, i < 3 ? 'camroll' : 'savedpics', {
-      type: 'file', content: `${base}wallpapers/${p}.jpg`, size: 2_100_000 + i * 113_456, created: now - i * 86400000, modified: now - i * 86400000,
+      type: 'file', content: assetUrl(`${base}wallpapers/${p}.jpg`), size: 2_100_000 + i * 113_456, created: now - i * 86400000, modified: now - i * 86400000,
     }));
   });
   ['notepad.exe', 'calc.exe', 'mspaint.exe', 'cmd.exe', 'explorer.exe', 'taskmgr.exe'].forEach((f, i) =>

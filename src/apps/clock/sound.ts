@@ -1,10 +1,11 @@
 /* Original synthesized alert sounds for the Clock app (WebAudio, no samples). */
+import { useSettings } from '@/core/store/settings';
 
 let ctx: AudioContext | null = null;
 function ac(): AudioContext | null {
   try {
     if (!ctx) ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-    if (ctx.state === 'suspended') void ctx.resume();
+    if (ctx.state === 'suspended') void ctx.resume().catch(() => undefined);
     return ctx;
   } catch {
     return null;
@@ -52,7 +53,8 @@ export function playChime(kind: ChimeKind = 'chimes', volume = 0.35): number {
   const c = ac();
   if (!c) return 0;
   const out = c.createGain();
-  out.gain.value = volume;
+  const settings = useSettings.getState();
+  out.gain.value = settings.muted ? 0 : volume * settings.volume / 100;
   out.connect(c.destination);
   const t = c.currentTime + 0.02;
   switch (kind) {

@@ -1,6 +1,28 @@
+import { useEffect, useState, type ReactNode } from 'react';
 import type { AppProps } from '@/core/types';
-import { Placeholder } from '@/components/Placeholder';
-
-export default function App(props: AppProps) {
-  return <Placeholder appId="settings" {...props} />;
+import { useSettings } from '@/core/store/settings';
+import { WALLPAPERS } from '@/core/wallpapers';
+import { Button } from '@/components/controls';
+import { AppFrame, dataUrl } from '../shared';
+import { openApp } from '@/core/store/windows';
+export default function Settings({args}:AppProps) {
+  const s=useSettings(); const [page,setPage]=useState(args?.page??'system'); const [message,setMessage]=useState('');
+  useEffect(()=>{if(args?.page)setPage(args.page);},[args?.page]);
+  const pages=[['system','System'],['personalization','Personalization'],['taskbar','Taskbar'],['your-info','Accounts'],['accessibility','Accessibility'],['about','About']];
+  const isPersonal=['personalization','background','colors','themes','lockscreen','start'].includes(page);
+  const row=(label:string,control:ReactNode,description?:string)=><div className="settings-row" key={label}><div><strong>{label}</strong>{description&&<div className="app-muted">{description}</div>}</div>{control}</div>;
+  const check=(key:'nightLight'|'muted'|'transparency'|'animations'|'snapWindows'|'taskbarAutoHide'|'taskbarWidgets'|'taskbarTaskView'|'showSecondsInClock')=><input type="checkbox" aria-label={key} checked={s[key]} onChange={e=>s.set({[key]:e.target.checked})}/>;
+  return <AppFrame id="settings"><div className="app-split"><nav className="app-sidebar"><div className="app-pad"><strong>{s.userName}</strong><div className="app-muted">Local account</div></div>{pages.map(([id,label])=><button key={id} className={page===id||(id==='personalization'&&isPersonal)?'selected':''} onClick={()=>setPage(id)}>{label}</button>)}</nav><main className="app-main"><h1>{isPersonal?'Personalization':pages.find(([id])=>id===page)?.[1]??'System'}</h1>
+    {isPersonal?<><div className="app-card"><h2>Make it yours</h2><div className="settings-wallpapers">{WALLPAPERS.map(w=><button key={w.id} className={s.wallpaper.type==='image'&&s.wallpaper.id===w.id?'selected':''} onClick={()=>s.set({wallpaper:{type:'image',id:w.id}})}><img src={w.thumb} alt=""/><span>{w.name}</span></button>)}</div></div>
+    {row('Theme',<select aria-label="Theme" value={s.theme} onChange={e=>s.set({theme:e.target.value as 'light'|'dark',appTheme:e.target.value as 'light'|'dark'})}><option value="light">Light</option><option value="dark">Dark</option></select>)}
+    {row('Accent color',<input aria-label="Accent color" type="color" value={s.accent} onChange={e=>s.set({accent:e.target.value})}/>)}{row('Transparency effects',check('transparency'))}{row('Animation effects',check('animations'))}
+    {row('Custom wallpaper',<input aria-label="Choose wallpaper" type="file" accept="image/*" onChange={async e=>{const f=e.target.files?.[0];if(f)try{s.set({wallpaper:{type:'custom',url:await dataUrl(f),name:f.name}});}catch{setMessage('Unable to load image');}}}/>)}
+    </>:page==='taskbar'?<>{row('Taskbar alignment',<select aria-label="Taskbar alignment" value={s.taskbarAlign} onChange={e=>s.set({taskbarAlign:e.target.value as 'left'|'center'})}><option value="center">Center</option><option value="left">Left</option></select>)}
+    {row('Search',<select aria-label="Taskbar search" value={s.taskbarSearch} onChange={e=>s.set({taskbarSearch:e.target.value as typeof s.taskbarSearch})}><option value="box">Search box</option><option value="icon">Search icon</option><option value="hidden">Hidden</option></select>)}
+    {row('Automatically hide taskbar',check('taskbarAutoHide'))}{row('Show widgets',check('taskbarWidgets'))}{row('Show Task View',check('taskbarTaskView'))}{row('Show seconds in clock',check('showSecondsInClock'))}
+    </>:['your-info','signin','accounts'].includes(page)?<>{row('Display name',<input aria-label="Display name" value={s.userName} onChange={e=>s.set({userName:e.target.value})}/>)}{row('Device name',<input aria-label="Device name" value={s.deviceName} onChange={e=>s.set({deviceName:e.target.value})}/>)}{row('Email label',<input aria-label="Email label" type="email" value={s.userEmail} onChange={e=>s.set({userEmail:e.target.value})}/>,'Used only in the local demo inbox.')}<p className="app-note">This is a local browser account. No online sign-in is required.</p>
+    </>:page==='accessibility'?<>{row('Text size',<input aria-label="Text size" type="range" min="80" max="140" value={s.textSize} onChange={e=>s.set({textSize:+e.target.value})}/>)}{row('Animation effects',check('animations'))}{row('Transparency effects',check('transparency'))}
+    </>:page==='about'?<div className="app-stack"><div className="app-card"><h2>WinClone 1.0</h2><p>A desktop that lives in your browser.</p><p>React · TypeScript · Vite</p><p className="app-muted">Files, preferences, tasks, events and messages are stored on this device. WinClone is an unofficial recreation, unaffiliated with Microsoft.</p></div><Button onClick={()=>openApp('winver')}>About Windows</Button><Button onClick={()=>{if(window.confirm('Reset personalization settings? Your files will remain.'))s.reset();}}>Reset settings</Button></div>:<><div className="app-card"><h2>{s.deviceName}</h2><span className="app-muted">WinClone · Browser desktop</span></div>
+    {row('Brightness',<input aria-label="Brightness" type="range" min="20" max="100" value={s.brightness} onChange={e=>s.set({brightness:+e.target.value})}/>)}{row('Night light',check('nightLight'))}{row('Volume',<input aria-label="Volume" type="range" min="0" max="100" value={s.volume} onChange={e=>s.set({volume:+e.target.value})}/>,'Applies within WinClone.')}{row('Mute',check('muted'))}{row('Snap windows',check('snapWindows'))}<p className="app-note">Display and sound preferences apply within WinClone.</p></>}{message&&<p role="status">{message}</p>}
+  </main></div></AppFrame>;
 }

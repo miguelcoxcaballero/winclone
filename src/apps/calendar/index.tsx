@@ -1,6 +1,17 @@
-import type { AppProps } from '@/core/types';
-import { Placeholder } from '@/components/Placeholder';
-
-export default function App(props: AppProps) {
-  return <Placeholder appId="calendar" {...props} />;
+import { useState } from 'react';
+import { Button } from '@/components/controls';
+import { AppFrame, Modal, useLocal } from '../shared';
+type Event={id:string;title:string;date:string;time:string};
+const key=(d:Date)=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+export default function Calendar() {
+  const [events,setEvents]=useLocal<Event[]>('wc.calendar',[]);const [month,setMonth]=useState(()=>new Date(new Date().getFullYear(),new Date().getMonth(),1));
+  const [selected,setSelected]=useState(key(new Date()));const [adding,setAdding]=useState(false);const [title,setTitle]=useState('');const [time,setTime]=useState('09:00');
+  const start=(month.getDay()+6)%7;const count=new Date(month.getFullYear(),month.getMonth()+1,0).getDate();const today=key(new Date());
+  const shift=(delta:number)=>setMonth(d=>new Date(d.getFullYear(),d.getMonth()+delta,1));
+  const selectedEvents=events.filter(e=>e.date===selected).sort((a,b)=>a.time.localeCompare(b.time));
+  return <AppFrame id="calendar" toolbar={<><Button onClick={()=>{setMonth(new Date(new Date().getFullYear(),new Date().getMonth(),1));setSelected(today);}}>Today</Button><Button aria-label="Previous month" onClick={()=>shift(-1)}>←</Button><Button aria-label="Next month" onClick={()=>shift(1)}>→</Button><h2 style={{margin:0}}>{month.toLocaleDateString(undefined,{month:'long',year:'numeric'})}</h2><span className="app-grow"/><Button variant="accent" onClick={()=>setAdding(true)}>New event</Button></>}>
+  <div className="app-pad app-stack"><div className="calendar-grid">{['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=><div key={d} className="calendar-weekday">{d}</div>)}{Array.from({length:Math.ceil((start+count)/7)*7},(_,i)=>{const day=i-start+1;if(day<1||day>count)return <div key={i} className="calendar-day"/>;const date=key(new Date(month.getFullYear(),month.getMonth(),day));return <button key={i} aria-label={date} className={`calendar-day ${date===selected?'selected':''} ${date===today?'today':''}`} onClick={()=>setSelected(date)} onDoubleClick={()=>{setSelected(date);setAdding(true);}}><span>{day}</span>{events.filter(e=>e.date===date).slice(0,2).map(e=><span key={e.id} className="calendar-event">{e.time} {e.title}</span>)}</button>;})}</div>
+  <h2>{new Date(`${selected}T12:00:00`).toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'})}</h2>{selectedEvents.length?selectedEvents.map(event=><div key={event.id} className="app-card app-row"><strong>{event.time}</strong><span className="app-grow">{event.title}</span><Button aria-label={`Delete ${event.title}`} onClick={()=>setEvents(es=>es.filter(e=>e.id!==event.id))}>Delete</Button></div>):<p className="app-muted">Nothing scheduled. Enjoy a little breathing room.</p>}</div>
+  {adding&&<Modal title="New event" onClose={()=>setAdding(false)}><form onSubmit={e=>{e.preventDefault();setEvents(es=>[...es,{id:crypto.randomUUID(),title:title.trim(),date:selected,time}]);setTitle('');setAdding(false);}}><label className="app-field">Event title<input required autoFocus value={title} onChange={e=>setTitle(e.target.value)}/></label><label className="app-field">Date<input type="date" required value={selected} onChange={e=>setSelected(e.target.value)}/></label><label className="app-field">Time<input type="time" required value={time} onChange={e=>setTime(e.target.value)}/></label><div className="app-actions"><Button type="button" onClick={()=>setAdding(false)}>Cancel</Button><Button variant="accent" type="submit">Save event</Button></div></form></Modal>}
+  </AppFrame>;
 }

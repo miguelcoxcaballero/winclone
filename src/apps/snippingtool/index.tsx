@@ -1,6 +1,10 @@
-import type { AppProps } from '@/core/types';
-import { Placeholder } from '@/components/Placeholder';
-
-export default function App(props: AppProps) {
-  return <Placeholder appId="snippingtool" {...props} />;
+import { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/controls';
+import { AppFrame, savePicture, download } from '../shared';
+import { FS } from '@/core/store/fs';
+export default function SnippingTool() {
+  const [image,setImage]=useState('');const [message,setMessage]=useState('Choose a screen, window or browser tab to capture.');const [busy,setBusy]=useState(false);const stream=useRef<MediaStream|null>(null);const mounted=useRef(true);
+  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;stream.current?.getTracks().forEach(t=>t.stop());};},[]);
+  const capture=async()=>{setBusy(true);try{if(!navigator.mediaDevices?.getDisplayMedia)throw new Error('Screen capture is unavailable in this browser. Try Chrome or Edge on a secure page.');const s=await navigator.mediaDevices.getDisplayMedia({video:true,audio:false});stream.current=s;if(!mounted.current)return;const v=document.createElement('video');v.srcObject=s;v.muted=true;await v.play();await new Promise(r=>setTimeout(r,150));const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d')!.drawImage(v,0,0);if(mounted.current){setImage(c.toDataURL());setMessage('Capture ready. Save it to Screenshots or export a PNG.');}}catch(e){if(mounted.current)setMessage(e instanceof Error?e.message:'Capture canceled.');}finally{stream.current?.getTracks().forEach(t=>t.stop());stream.current=null;if(mounted.current)setBusy(false);}};
+  return <AppFrame id="snippingtool" toolbar={<><Button variant="accent" disabled={busy} onClick={capture}>{busy?'Capturing…':'New capture'}</Button><Button disabled={!image} onClick={()=>{savePicture(`Screenshot-${Date.now()}.png`,image,FS.screenshots);setMessage('Saved to Pictures / Screenshots');}}>Save</Button><Button disabled={!image} onClick={async()=>download('Screenshot.png',await(await fetch(image)).blob())}>Export PNG</Button></>}><div className="app-pad app-stack"><p role="status">{message}</p>{image&&<img alt="Screen capture" src={image} style={{maxWidth:'100%'}}/>}</div></AppFrame>;
 }

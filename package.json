@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc --noEmit -p . && vite build",
     "typecheck": "tsc --noEmit -p .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:portable": "npm run typecheck && node scripts/portable.mjs",
+    "test:browser": "node scripts/verify.mjs"
   },
   "dependencies": {
     "@fluentui/react-icons": "^2.0.344",

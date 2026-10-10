@@ -1,6 +1,21 @@
+import { useState } from 'react';
 import type { AppProps } from '@/core/types';
-import { Placeholder } from '@/components/Placeholder';
-
-export default function App(props: AppProps) {
-  return <Placeholder appId="edge" {...props} />;
+import { Button } from '@/components/controls';
+import { useFS } from '@/core/store/fs';
+import { openApp } from '@/core/store/windows';
+import { AppIcon } from '@/icons/AppIcons';
+import { AppFrame, useLocal } from '../shared';
+type Tab={id:number;url:string;history:string[];position:number};
+const validUrl=(value:string)=>{try{const u=new URL(value.includes('://')?value:`https://${value}`);return ['http:','https:'].includes(u.protocol)?u.href:null;}catch{return null;}};
+export default function Edge({args}:AppProps) {
+  const initial=args?.url?validUrl(args.url)??'':args?.fileId?useFS.getState().get(args.fileId)?.content??'':'';
+  const [tabs,setTabs]=useState<Tab[]>([{id:1,url:initial,history:[initial],position:0}]);const [active,setActive]=useState(1);const [address,setAddress]=useState(initial);const [revision,setRevision]=useState(0);const [favorites,setFavorites]=useLocal<string[]>('wc.edge.favorites',[]);const [status,setStatus]=useState('');
+  const tab=tabs.find(t=>t.id===active)??tabs[0];
+  const navigate=(value:string)=>{const url=validUrl(value);if(!url){setStatus('Enter a valid http or https address.');return;}setTabs(ts=>ts.map(t=>t.id===active?{...t,url,history:[...t.history.slice(0,t.position+1),url],position:t.position+1}:t));setAddress(url);setStatus('Some websites block embedded browsing. Use Open in browser if the page stays blank.');};
+  const move=(step:number)=>{const index=tab.position+step;if(index<0||index>=tab.history.length)return;const url=tab.history[index];setTabs(ts=>ts.map(t=>t.id===active?{...t,url,position:index}:t));setAddress(url);};
+  const newTab=()=>{const id=Date.now();setTabs(ts=>[...ts,{id,url:'',history:[''],position:0}]);setActive(id);setAddress('');};
+  return <AppFrame id="edge" title="Microsoft Edge" toolbar={<><Button disabled={!tab.position} aria-label="Back" onClick={()=>move(-1)}>←</Button><Button disabled={tab.position>=tab.history.length-1} aria-label="Forward" onClick={()=>move(1)}>→</Button><Button aria-label="Reload page" onClick={()=>setRevision(r=>r+1)}>↻</Button><form className="app-grow app-row" onSubmit={e=>{e.preventDefault();navigate(address);}}><input className="app-grow" aria-label="Web address" placeholder="Enter a web address" value={address} onChange={e=>setAddress(e.target.value)}/><Button type="submit">Go</Button></form><Button disabled={!/^https?:/.test(tab.url)} aria-label="Favorite page" onClick={()=>setFavorites(fs=>fs.includes(tab.url)?fs.filter(f=>f!==tab.url):[...fs,tab.url])}>{favorites.includes(tab.url)?'★':'☆'}</Button>{/^https?:/.test(tab.url)&&<a className="fl-btn fl-btn-standard" href={tab.url} target="_blank" rel="noreferrer">Open in browser</a>}</>} footer={status||'Your favorites stay on this device.'}>
+    <div className="app-toolbar">{tabs.map(t=><div key={t.id} className="app-row"><Button variant={active===t.id?'accent':'standard'} onClick={()=>{setActive(t.id);setAddress(t.url);}}>{t.url?(()=>{try{return new URL(t.url).hostname||'Document';}catch{return'Document';}})():'New tab'}</Button>{tabs.length>1&&<Button aria-label="Close tab" onClick={()=>{const remaining=tabs.filter(x=>x.id!==t.id);setTabs(remaining);if(active===t.id){setActive(remaining[0].id);setAddress(remaining[0].url);}}}>×</Button>}</div>)}<Button aria-label="New tab" onClick={newTab}>+</Button></div>
+    {tab.url?<iframe key={`${tab.id}-${tab.url}-${revision}`} title="Web page" src={tab.url} sandbox="allow-scripts allow-forms allow-popups" referrerPolicy="no-referrer" style={{width:'100%',height:'calc(100% - 58px)',border:0,background:'white'}}/>:<div className="app-pad"><h1>A fresh start.</h1><p className="app-muted">Browse the web or pick up where you left off in WinClone.</p><div className="app-grid" style={{marginTop:28}}>{[['notepad','Write a note'],['photos','Your pictures'],['todo','Plan your day'],['calendar','What’s coming up']].map(([id,label])=><button className="app-card app-button-card" key={id} onClick={()=>openApp(id)}><AppIcon appId={id} size={40}/><h3 style={{marginTop:12}}>{label}</h3></button>)}</div>{favorites.length>0&&<><h2 style={{marginTop:30}}>Favorites</h2><div className="app-stack">{favorites.map(url=><Button key={url} onClick={()=>navigate(url)}>{url}</Button>)}</div></>}</div>}
+  </AppFrame>;
 }

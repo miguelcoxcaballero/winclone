@@ -15,6 +15,7 @@ all in light and dark themes.
 npm install
 npm run dev        # → http://localhost:5173
 npm run build      # static site in dist/ (deployable to any static host)
+npm run build:portable # dist/WinClone.html, opens directly in Chrome/Edge
 ```
 
 Useful URL parameters: `?skip=1` jumps straight to the desktop, `?theme=dark`,
@@ -24,16 +25,22 @@ Useful URL parameters: `?skip=1` jumps straight to the desktop, `?theme=dark`,
 
 | Shell | Apps |
 |---|---|
-| Boot, lock, sign-in, sleep, shut down and restart screens | File Explorer (tabs, details/icon views, drag & drop, Recycle Bin) |
+| Boot, lock, sign-in, sleep, shut down and restart screens | File Explorer (details/icon views, import/export, copy/paste, undo, Recycle Bin) |
 | Desktop icons (drag, marquee select, rename, context menus) | Microsoft Edge (tabs, real browsing in an iframe, history & favorites) |
-| Centered taskbar with live indicators, previews and jump lists | Settings (personalization, display, taskbar, accounts, update…) |
+| Centered taskbar with live indicators, previews and jump lists | Settings (personalization, display, taskbar, local account, accessibility) |
 | Start menu (pinned pages, Recommended, All apps) and search | Notepad, Calculator, Paint, Terminal |
 | Quick Settings, notification center + calendar, widgets | Photos, Media Player, Camera, Clock, Snipping Tool, Task Manager |
-| Window manager: drag, resize, snap, snap layouts, Task View | Outlook, Calendar, Microsoft To Do, Microsoft Store, Weather |
+| Window manager: drag, resize, snap, snap layouts, Task View | Local demo inbox, Calendar, To Do, built-in app library, Weather |
 | Keyboard shortcuts (Win, Win+D/E/R/I/A/N/W/Tab/arrows, Ctrl+Shift+Esc) | About (winver) |
 
 Everything you change — settings, files, wallpapers, pins — is saved in your
 browser's `localStorage` and a virtual file system.
+
+## Portable version and validation
+
+Build `dist/WinClone.html` with `npm run build:portable`. This single file includes the code, styles and original wallpapers; it needs no server for the desktop and local apps. Click the lock screen, then **Sign in**. The initial local account needs no password. See [docs/PROBAR.md](docs/PROBAR.md) for hands-on checks and browser tests.
+
+Mail uses a local demo inbox and never transmits email. The app library launches included apps and creates shortcuts rather than installing operating system software. Weather clearly labels its offline sample and can optionally request live data from Open-Meteo. External websites may block embedded browsing. Camera and screen capture require supported browser APIs and user permission. The terminal operates on the virtual filesystem.
 
 ## Artwork and fonts
 
