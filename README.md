@@ -38,6 +38,8 @@ browser's `localStorage` and a virtual file system.
 
 ## Portable version and validation
 
+GitHub Pages deployment files are in the `gh-pages` branch. See [docs/GITHUB_PAGES.md](docs/GITHUB_PAGES.md) for activation and the site address.
+
 Build `dist/WinClone.html` with `npm run build:portable`. This single file includes the code, styles and original wallpapers; it needs no server for the desktop and local apps. Click the lock screen, then **Sign in**. The initial local account needs no password. See [docs/PROBAR.md](docs/PROBAR.md) for hands-on checks and browser tests.
 
 Mail uses a local demo inbox and never transmits email. The app library launches included apps and creates shortcuts rather than installing operating system software. Weather clearly labels its offline sample and can optionally request live data from Open-Meteo. External websites may block embedded browsing. Camera and screen capture require supported browser APIs and user permission. The terminal operates on the virtual filesystem.
