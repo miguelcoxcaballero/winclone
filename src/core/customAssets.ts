@@ -1,9 +1,9 @@
 /**
  * Optional local asset overrides.
  *
- * WinClone ships only original artwork. If you own copies of other icons or
- * wallpapers (for example from your own Windows installation) you can drop
- * them into `src/custom-assets/` for personal, local use – that folder is
+ * WinClone bundles reference icons and original wallpapers. Additional icons or
+ * wallpapers (for example from your own Windows installation) can be dropped
+ * into `src/custom-assets/` for personal, local use – that folder is
  * git-ignored, so the files are never committed or redistributed.
  *
  *   src/custom-assets/icons/<appId>.png|svg|webp|ico   → replaces that app's icon

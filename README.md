@@ -46,12 +46,7 @@ Mail uses a local demo inbox and never transmits email. The app library launches
 
 ## Artwork and fonts
 
-All icons, illustrations and wallpapers in this repository are **original
-artwork** made for this project. Interface glyphs come from the MIT-licensed
-[Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons).
-Microsoft's own icons, wallpapers, sounds and fonts are copyrighted and are
-**not** included. The UI uses *Segoe UI Variable* when it is installed on your
-computer (it is on Windows) and falls back to your system font elsewhere.
+App and system icons use locally bundled Windows reference images; provenance and hashes are recorded in [src/assets/windows/sources.json](src/assets/windows/sources.json) and [docs/ICON_ASSETS.md](docs/ICON_ASSETS.md). The wallpapers remain original artwork. Interface glyphs come from the MIT-licensed [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons). Microsoft's app images and trademarks remain Microsoft's property; the source collections do not grant a blanket license to those assets. Fonts are not bundled: the UI uses Segoe UI when installed, with a system-font fallback.
 
 ### Using your own icons and wallpapers
 

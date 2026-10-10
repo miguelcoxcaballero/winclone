@@ -13,10 +13,7 @@ npm run build        # static site in dist/
 
 ## Assets & licensing rules (important)
 
-* **Never copy Microsoft's proprietary assets** – no product logos, app icons,
-  wallpapers, sounds, fonts or screenshots taken from Windows. All artwork in
-  this repo is original (hand-written SVG in `src/icons`, generated wallpapers
-  in `public/wallpapers`).
+* App and system images are bundled under `src/assets/windows` to match the Windows reference interface requested for this project. Record the source, revision where available, and hashes in `sources.json`; see `docs/ICON_ASSETS.md`. Preserve reference pixels instead of redrawing brand icons. Wallpapers remain original and Microsoft fonts are not bundled.
 * Interface glyphs come from **Fluent UI System Icons** (`@fluentui/react-icons`,
   MIT licensed). Import the *unsized* names, e.g.
   `import { SearchRegular, SettingsFilled } from '@fluentui/react-icons'`.
@@ -45,7 +42,7 @@ src/
                            ComboBox, Checkbox, Radio, SettingsCard, Expander,
                            InfoBar, Dialog, NavItem, Pivot, MenuBar, Tooltip,
                            ProgressBar, ProgressRing, DotsSpinner…)
-  icons/AppIcons.tsx       original app icons: <AppIcon appId="notepad" size={24} />
+  icons/AppIcons.tsx       app icon registry: <AppIcon appId="notepad" size={24} />
   icons/ShellIcons.tsx     folder / file / drive / recycle bin icons, <NodeIcon node={…} />
   shell/                   desktop, taskbar, start menu, flyouts, lock screen, window frame
   apps/<id>/meta.ts        app metadata (name, default size, title bar height…)

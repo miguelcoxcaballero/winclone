@@ -1,0 +1,235 @@
+[
+  {
+    "id": "edge",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Microsoft Edge/Edge.ico",
+    "sha256": "95f206fef46b894e0ae6526bb87dbe07485159bd5414643e3bc6332a654f7893",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "edge.png",
+    "bundledSha256": "ad66139ca3b96a1be6c2a38fa3c2f392c41d1324292fbce2d6db9f8de84728c6"
+  },
+  {
+    "id": "explorer",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Windows Explorer.ico",
+    "sha256": "fa23381b3e11f217a3317058e0483b7e9d2d3ebe00f6aa37436e640442660aac",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "explorer.png",
+    "bundledSha256": "995c805df0a5f4b0933720599c7282b602b9889ab4d07a28348f6618915d7d2e"
+  },
+  {
+    "id": "settings",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Settings.ico",
+    "sha256": "61c7bd5d0c8d23d8eb2df63ad5f6c9cb395aa316cac124cfa624ef554af45801",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "settings.png",
+    "bundledSha256": "ea6ce72dbcf5e27923c6aac4b879892e18a978dc4357d64f9670a2b4b4066277"
+  },
+  {
+    "id": "notepad",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Editor/Notepad.ico",
+    "sha256": "e538bba5623a010c579396b8c38e1042c276dd3036696a64b8f82be8df190b32",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "notepad.png",
+    "bundledSha256": "5646287594605cb3781f76513c56e720862460248fe0946c89cc9207f6c9893d"
+  },
+  {
+    "id": "paint",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Microsoft Paint.ico",
+    "sha256": "4911c357bbeee7acc32b203ddf270da1b886c332dd5817c5ee495dc7c179f3cb",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "paint.png",
+    "bundledSha256": "81144f44c8440015476ff47ed21fdf8dd182f672a5afe3635a48e989b525bee3"
+  },
+  {
+    "id": "photos",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Photos.ico",
+    "sha256": "9b424d31aafb00876c79cc7e194ee32641502aa47ce38f6997d814d08315e8d8",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "photos.png",
+    "bundledSha256": "b788bef17767c932ad927ff1fe16acfac359bc6a88c56c1d2b19437ee1ccf21d"
+  },
+  {
+    "id": "mediaplayer",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Media Player.ico",
+    "sha256": "d392c673d7d5336589b01131dce70586a185cb4e65758a38a05747b2711a027b",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "mediaplayer.png",
+    "bundledSha256": "72f0f602335de10962a4a2be5e82c88590ac1d7d1ebea4789acb822c76bdef12"
+  },
+  {
+    "id": "clock",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Alarms & Clock 2.ico",
+    "sha256": "0857cec32d568d73283f7dabd556d2fac669de57cedb3e50808787cfba756948",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "clock.png",
+    "bundledSha256": "aaee22daf4e0a19a460d1607b7d6436f5c450935360a00f2739f92a56e26bd11"
+  },
+  {
+    "id": "weather",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/MSN Weather.ico",
+    "sha256": "64fc3fe3461534add1ae8e2e670833a98fdc19ea13e15b3ec1a2a63af51b68a5",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "weather.png",
+    "bundledSha256": "5abd9036d7310565c378c93bd544a2536debcc5b96a4710697e883ea9615a58a"
+  },
+  {
+    "id": "taskmgr",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Task Manager.ico",
+    "sha256": "d54063648654d01927348ec7a36fbfea653073d304e3889c036b59afaeb62e5d",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "taskmgr.png",
+    "bundledSha256": "2d92504e9a2fed45146d44e4ca381a486f5dfaea481903985c59be7b82d2d0e4"
+  },
+  {
+    "id": "snippingtool",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Snipping Tool (Snip and Sketch).ico",
+    "sha256": "58d6be47dbf9feeaf91feb8f3153b0d4cacae3d3e2fa8dc9adacec3caa5c4a5c",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "snippingtool.png",
+    "bundledSha256": "ac4fd4d04294e6a65619a97d048ef33f5125bdfa993ef4335ee000c1c677492d"
+  },
+  {
+    "id": "todo",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Microsoft To-Do.ico",
+    "sha256": "ccc893005b462fa4deda35e9901b97f25027c51c0dda5344739bc39202a682ef",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "todo.png",
+    "bundledSha256": "1c59c6caaecd3dc4a44975a2d8be2e4e214f9b5efd2cd8b7dff1e1a5a8a0dab2"
+  },
+  {
+    "id": "calendar",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Calendar.ico",
+    "sha256": "efe8b0dff9ee085e61c8ee7302bc8a2c0833cdd8d162f0037829d6e93c1b70c5",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "calendar.png",
+    "bundledSha256": "19dcf4bab93888cb096c7b35c29e756c6d575f2e09f29f61bf23673c28e02ae3"
+  },
+  {
+    "id": "store",
+    "repository": "hesphoros/windows11-icons",
+    "path": "applications/store4-7.png",
+    "sha256": "602aae201d293d99ccc4ebbf61064e5d0c62600064f3e9b7da0fd6f799a5fc8d",
+    "size": [
+      192,
+      192
+    ],
+    "bundledFile": "store.png",
+    "bundledSha256": "602aae201d293d99ccc4ebbf61064e5d0c62600064f3e9b7da0fd6f799a5fc8d"
+  },
+  {
+    "id": "camera",
+    "repository": "hesphoros/windows11-icons",
+    "path": "applications/camera2-8.png",
+    "sha256": "af663977e59af4f159e8f6c760c1e1af4ad10cb477061e0943b8e038090c36be",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "camera.png",
+    "bundledSha256": "af663977e59af4f159e8f6c760c1e1af4ad10cb477061e0943b8e038090c36be"
+  },
+  {
+    "id": "terminal",
+    "repository": "microsoft/terminal",
+    "revision": "7d06b26f73ef4bcb78b56647c395251eeee4c2bc",
+    "path": "res/terminal/Terminal.svg",
+    "sha256": "035e8e1982ee01c203fd1bf0212c8b28816f72a4ab2f12b6c77316de05d13f85",
+    "bundledFile": "terminal.svg",
+    "bundledSha256": "035e8e1982ee01c203fd1bf0212c8b28816f72a4ab2f12b6c77316de05d13f85"
+  },
+  {
+    "id": "folder",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/folder-0.png",
+    "sha256": "95c50c81b4095f1bdb3374ee1b688ad67f390be43f5d028eb0094f936c1870f9",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder.png",
+    "bundledSha256": "8fef57b3303a9777a6b54bf6c3a07e15a2d5b29990e81031196b18e88b39f8fb"
+  },
+  {
+    "id": "calculator",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Calculator.ico",
+    "sha256": "4cc484c54cbae141a3031ae7e49468ff7f1ec6bec14708fd9139e864c1c4d3c1",
+    "bundledFile": "calculator.png",
+    "bundledSha256": "13b9d5c26c854830e5b8e88295240c7a24c755d059089dbe9d3de03f3ff043d1"
+  },
+  {
+    "id": "mail",
+    "repository": "blueedgetechno/win11React",
+    "revision": "afb02e797106c208314abbf837ec11bf50da9d62",
+    "path": "public/img/icon/outlook.png",
+    "sha256": "165eb36d0e797b9ae0a49918605120addbb9220a51e0451b36f84db3acb2f129",
+    "bundledFile": "mail.png",
+    "bundledSha256": "165eb36d0e797b9ae0a49918605120addbb9220a51e0451b36f84db3acb2f129"
+  }
+]

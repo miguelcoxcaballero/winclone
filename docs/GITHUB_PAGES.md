@@ -14,6 +14,6 @@ https://miguelcoxcaballero.github.io/winclone/
 
 El ZIP quedará en `https://miguelcoxcaballero.github.io/winclone/WinClone-probar.zip`.
 
-La activación y la respuesta pública no se pudieron comprobar desde el entorno cloud: el proxy devuelve 403 al conectar con `api.github.com` y `miguelcoxcaballero.github.io`. Ambos dominios se añadieron al borrador de red para revisión. El acceso Git sí funciona y las dos ramas se subieron y verificaron en el remoto. No se afirma que el sitio esté activo hasta observar un despliegue correcto o una respuesta pública.
+Pages está activado en `gh-pages` y GitHub confirmó un despliegue `built`. La dirección pública respondió HTTP 200 durante la comprobación del 10 de octubre de 2026.
 
 Para actualizar el contenido, vuelve a generar `npm run build:portable`, toma la rama remota `gh-pages` en una carpeta temporal de publicación, sustituye `index.html` por el HTML generado, actualiza el ZIP y sube un commit normal. Conserva el historial y evita `--force`.
