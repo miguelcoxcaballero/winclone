@@ -1,0 +1,59 @@
+.wv-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--layer-fill-alt);
+  color: var(--text-primary);
+  font-size: 12px;
+  line-height: 16px;
+}
+[data-theme="dark"] .wv-root { background: var(--solid-base); }
+
+.wv-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  height: 104px;
+  flex: none;
+  padding-top: 6px;
+}
+.wv-glyph { flex: none; }
+.wv-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+}
+.wv-word-a { font-weight: 600; color: var(--text-primary); }
+.wv-word-b { font-weight: 300; color: var(--accent-text); }
+
+.wv-rule {
+  height: 1px;
+  margin: 0 20px;
+  background: var(--control-stroke-secondary);
+  flex: none;
+}
+
+.wv-body {
+  flex: 1;
+  min-height: 0;
+  padding: 16px 32px 0 52px;
+  overflow: auto;
+}
+.wv-line { margin: 0; }
+.wv-para { margin: 16px 0 0; color: var(--text-primary); }
+.wv-license { display: flex; flex-direction: column; }
+.wv-user { margin-left: 16px; margin-top: 4px; }
+.wv-org { color: var(--text-secondary); margin-top: 0; }
+
+.wv-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px 16px;
+  flex: none;
+}
+.wv-ok { min-width: 96px; }
