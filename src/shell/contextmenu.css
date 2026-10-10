@@ -1,0 +1,72 @@
+.ctx-layer { position: fixed; inset: 0; z-index: 99000; pointer-events: none; }
+.ctx-menu {
+  position: fixed;
+  pointer-events: auto;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 4px 0 2px;
+  background: var(--acrylic-flyout);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+  border: 1px solid var(--surface-stroke-flyout);
+  border-radius: var(--r-overlay);
+  box-shadow: var(--shadow-flyout);
+  color: var(--text-primary);
+  font-family: var(--font);
+  animation: wc-menu-in 200ms var(--ease-fluent) both;
+}
+.ctx-menu.up { animation-name: wc-menu-in-up; }
+[data-theme="light"] .ctx-menu { background: rgba(249, 249, 249, 0.92); }
+[data-theme="dark"] .ctx-menu { background: rgba(44, 44, 44, 0.94); }
+[data-transparency="off"] .ctx-menu { background: var(--acrylic-flyout-solid); }
+
+.ctx-item {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 8px);
+  height: 30px;
+  margin: 0 4px 2px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--r-control);
+  background: transparent;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+  gap: 12px;
+  color: var(--text-primary);
+}
+.ctx-item:hover:not(:disabled), .ctx-item.sub-open { background: var(--subtle-fill-hover); }
+.ctx-item:active:not(:disabled) { background: var(--subtle-fill-pressed); color: var(--text-secondary); }
+.ctx-item:disabled { color: var(--text-disabled); }
+.ctx-item.bold .ctx-label { font-weight: 600; }
+.ctx-icon { display: flex; width: 16px; height: 16px; flex: none; align-items: center; justify-content: center; }
+.ctx-icon svg { width: 16px; height: 16px; }
+.ctx-radio { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.ctx-label { flex: 1; overflow: hidden; text-overflow: ellipsis; }
+.ctx-shortcut { color: var(--text-secondary); font-size: 12px; margin-left: 24px; }
+.ctx-item:disabled .ctx-shortcut { color: var(--text-disabled); }
+.ctx-chev { display: flex; color: var(--text-secondary); margin-right: -4px; }
+.ctx-chev svg { width: 12px; height: 12px; }
+.ctx-sep { height: 1px; margin: 2px 0 4px; background: var(--divider); }
+
+.ctx-quick { display: flex; gap: 4px; padding: 0 4px 2px; }
+.ctx-quick-btn {
+  flex: 1;
+  height: 36px;
+  min-width: 36px;
+  border: 0;
+  border-radius: var(--r-control);
+  background: transparent;
+  display: flex; align-items: center; justify-content: center;
+}
+.ctx-quick-btn:hover { background: var(--subtle-fill-hover); }
+.ctx-quick-btn svg { width: 16px; height: 16px; }
+.ctx-quick-btn:disabled { color: var(--text-disabled); }
+
+/* Legacy (Windows 10 style) menu used by title bar system menus and "Show more options" */
+.ctx-menu.legacy {
+  border-radius: var(--r-overlay);
+  min-width: 180px;
+}
+.ctx-menu.legacy .ctx-item { height: 28px; font-size: 13px; }

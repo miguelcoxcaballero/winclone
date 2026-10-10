@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button { cursor: default; }
+
+input, textarea, [contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+img, svg { display: block; }
+
+::selection { background: var(--accent-fill); color: var(--text-on-accent); }
+
+/* Fluent-style overlay scrollbars */
+.os-scroll, .os-scroll * { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+.os-scroll:hover, .os-scroll *:hover { scrollbar-color: var(--scrollbar-thumb) transparent; }
+::-webkit-scrollbar { width: 12px; height: 12px; background: transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-radius: 12px;
+  background-clip: padding-box;
+  transition: border-width 0.1s;
+}
+*:hover::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb); }
+::-webkit-scrollbar-thumb:hover { border-width: 3px; }
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+
+/* Focus visual (keyboard only) */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--focus-stroke-outer);
+  outline-offset: 1px;
+  border-radius: var(--r-control);
+}
+
+/* Type ramp helpers */
+.t-caption { font-size: var(--t-caption); line-height: var(--lh-caption); }
+.t-body { font-size: var(--t-body); line-height: var(--lh-body); }
+.t-body-strong { font-size: var(--t-body); line-height: var(--lh-body); font-weight: 600; }
+.t-subtitle { font-family: var(--font-display); font-size: var(--t-subtitle); line-height: var(--lh-subtitle); font-weight: 600; }
+.t-title { font-family: var(--font-display); font-size: var(--t-title); line-height: var(--lh-title); font-weight: 600; }
+.t-title-large { font-family: var(--font-display); font-size: var(--t-title-large); line-height: var(--lh-title-large); font-weight: 600; }
+.t-display { font-family: var(--font-display); font-size: var(--t-display); line-height: var(--lh-display); font-weight: 600; }
+.t-secondary { color: var(--text-secondary); }
+.t-tertiary { color: var(--text-tertiary); }
+
+/* Fluent icon sizing helper (react-icons render an <svg> with width/height 1em) */
+.fi { font-size: 16px; display: inline-flex; flex: none; }
+.fi > svg { width: 1em; height: 1em; }
+
+@keyframes wc-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes wc-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes wc-slide-up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes wc-slide-down-out { from { transform: none; opacity: 1; } to { transform: translateY(40px); opacity: 0; } }
+@keyframes wc-pop-in { from { transform: scale(0.96); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes wc-menu-in { from { transform: translateY(-12px); opacity: 0; clip-path: inset(0 0 100% 0 round 8px); } to { transform: none; opacity: 1; clip-path: inset(0 0 0 0 round 8px); } }
+@keyframes wc-menu-in-up { from { transform: translateY(12px); opacity: 0; clip-path: inset(100% 0 0 0 round 8px); } to { transform: none; opacity: 1; clip-path: inset(0 0 0 0 round 8px); } }
+@keyframes wc-spin { to { transform: rotate(360deg); } }
+@keyframes wc-page-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+[data-animations="off"] *, [data-animations="off"] *::before, [data-animations="off"] *::after {
+  animation-duration: 1ms !important;
+  transition-duration: 1ms !important;
+}
