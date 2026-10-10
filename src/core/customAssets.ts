@@ -1,7 +1,7 @@
 /**
  * Optional local asset overrides.
  *
- * WinClone bundles reference icons and original wallpapers. Additional icons or
+ * WinClone bundles reference icons, Bloom wallpapers and original backgrounds. Additional icons or
  * wallpapers (for example from your own Windows installation) can be dropped
  * into `src/custom-assets/` for personal, local use – that folder is
  * git-ignored, so the files are never committed or redistributed.

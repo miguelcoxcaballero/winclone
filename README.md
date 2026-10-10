@@ -40,13 +40,13 @@ browser's `localStorage` and a virtual file system.
 
 GitHub Pages deployment files are in the `gh-pages` branch. See [docs/GITHUB_PAGES.md](docs/GITHUB_PAGES.md) for activation and the site address.
 
-Build `dist/WinClone.html` with `npm run build:portable`. This single file includes the code, styles and original wallpapers; it needs no server for the desktop and local apps. Click the lock screen, then **Sign in**. The initial local account needs no password. See [docs/PROBAR.md](docs/PROBAR.md) for hands-on checks and browser tests.
+Build `dist/WinClone.html` with `npm run build:portable`. This single file includes the code, styles, icons and wallpapers; it needs no server for the desktop and local apps. Click the lock screen, then **Sign in**. The initial local account needs no password. See [docs/PROBAR.md](docs/PROBAR.md) for hands-on checks and browser tests.
 
 Mail uses a local demo inbox and never transmits email. The app library launches included apps and creates shortcuts rather than installing operating system software. Weather clearly labels its offline sample and can optionally request live data from Open-Meteo. External websites may block embedded browsing. Camera and screen capture require supported browser APIs and user permission. The terminal operates on the virtual filesystem.
 
 ## Artwork and fonts
 
-App and system icons use locally bundled Windows reference images; provenance and hashes are recorded in [src/assets/windows/sources.json](src/assets/windows/sources.json) and [docs/ICON_ASSETS.md](docs/ICON_ASSETS.md). The wallpapers remain original artwork. Interface glyphs come from the MIT-licensed [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons). Microsoft's app images and trademarks remain Microsoft's property; the source collections do not grant a blanket license to those assets. Fonts are not bundled: the UI uses Segoe UI when installed, with a system-font fallback.
+App and system icons use locally bundled Windows reference images; provenance and hashes are recorded in [src/assets/windows/sources.json](src/assets/windows/sources.json) and [docs/ICON_ASSETS.md](docs/ICON_ASSETS.md). The default Bloom wallpapers use Windows reference images; the other wallpapers remain original artwork. Interface glyphs come from the MIT-licensed [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons). Microsoft's app images and trademarks remain Microsoft's property; the source collections do not grant a blanket license to those assets. Fonts are not bundled: the UI uses Segoe UI when installed, with a system-font fallback.
 
 ### Using your own icons and wallpapers
 

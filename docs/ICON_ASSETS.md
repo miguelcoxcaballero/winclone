@@ -1,6 +1,6 @@
 # Icon assets
 
-The Windows reference images in `src/assets/windows` replace the original hand-drawn approximations. They are bundled locally and embedded in the portable HTML, so the interface never depends on a third-party icon CDN.
+The Windows reference icon images in `src/assets/windows` replace the original hand-drawn approximations. They are bundled locally and embedded in the portable HTML, so the interface never depends on a third-party icon CDN.
 
 Sources:
 
@@ -14,3 +14,10 @@ Sources:
 `sources.json` records the exact source path, downloaded-byte SHA-256 and bundled-byte SHA-256 for each reference image. Local personal overrides in `src/custom-assets/icons` take priority.
 
 Microsoft owns its app artwork and trademarks. The third-party collections do not grant a blanket license to Microsoft's artwork; their repository terms must not be treated as an asset license. This browser recreation is not affiliated with Microsoft. The images improve icon fidelity; they do not establish pixel-for-pixel parity with every current Windows build or Store app update.
+
+## Bloom wallpapers
+
+The default light and dark Bloom pictures are copied byte-for-byte from [Win11React](https://github.com/blueedgetechno/win11React), revision `afb02e797106c208314abbf837ec11bf50da9d62`. Microsoft owns these images. The existing `flow-light` and `flow-dark` IDs remain stable for saved settings; Settings displays the name Bloom. Thumbnails are resized copies; the desktop uses the original 3840×2400 JPEG. The other backgrounds remain original artwork.
+
+- `public/wallpapers/flow-light.jpg`: source `public/img/wallpaper/default/img0.jpg`, SHA-256 `86032ef7f2eada028231dfba46237edeb42515640a93b5dfce0cbb2b671bbc4e`.
+- `public/wallpapers/flow-dark.jpg`: source `public/img/wallpaper/dark/img0.jpg`, SHA-256 `a003853645101340002a916901c0c867020e6021d48da669138c0ddc21301122`.

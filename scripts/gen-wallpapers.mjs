@@ -161,6 +161,8 @@ const designs = {
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: W, height: H } });
 for (const [name, svg] of Object.entries(designs)) {
+  // Preserve the bundled Bloom reference photographs.
+  if (name === 'flow-light' || name === 'flow-dark') continue;
   writeFileSync(join(out, `${name}.svg.tmp`), svg);
   await page.setContent(`<html><body style="margin:0;overflow:hidden">${svg}</body></html>`);
   await page.screenshot({ path: join(out, `${name}.jpg`), type: 'jpeg', quality: 86 });

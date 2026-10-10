@@ -13,7 +13,7 @@ npm run build        # static site in dist/
 
 ## Assets & licensing rules (important)
 
-* App and system images are bundled under `src/assets/windows` to match the Windows reference interface requested for this project. Record the source, revision where available, and hashes in `sources.json`; see `docs/ICON_ASSETS.md`. Preserve reference pixels instead of redrawing brand icons. Wallpapers remain original and Microsoft fonts are not bundled.
+* App and system images are bundled under `src/assets/windows` to match the Windows reference interface requested for this project. Record the source, revision where available, and hashes in `sources.json`; see `docs/ICON_ASSETS.md`. Preserve reference pixels instead of redrawing brand icons. Default Bloom wallpapers use reference images; the other wallpapers remain original. Microsoft fonts are not bundled.
 * Interface glyphs come from **Fluent UI System Icons** (`@fluentui/react-icons`,
   MIT licensed). Import the *unsized* names, e.g.
   `import { SearchRegular, SettingsFilled } from '@fluentui/react-icons'`.

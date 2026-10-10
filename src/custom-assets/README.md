@@ -2,7 +2,7 @@
 
 Everything in this folder except this README is ignored by git.
 
-WinClone bundles Windows reference icons and original wallpapers. If you own copies of other images – for
+WinClone bundles Windows reference icons, Bloom wallpapers and original backgrounds. If you own copies of other images – for
 example the icons or wallpapers from **your own** Windows installation – you can
 place them here for personal, local use and they will replace the built-in art:
 
