@@ -1,6 +1,6 @@
 # GitHub Pages
 
-El código fuente está en `claude/festive-dijkstra-598xij`. La versión generada está publicada en la rama `gh-pages`:
+El código fuente está en `main`. La versión generada está publicada en la rama `gh-pages`:
 
 - `index.html`: aplicación autónoma, con código, estilos e imágenes incluidos.
 - `.nojekyll`: indica que los archivos deben servirse directamente.

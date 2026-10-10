@@ -21,27 +21,14 @@ function Svg({ size = 24, className, children }: P & { children: (id: (n: string
   );
 }
 
-/* ── Start glyph: four rounded tiles ── */
+/* Windows 11 Start: equal square panes, straight corners and a uniform blue. */
 export function StartGlyph({ size = 24, className }: P) {
-  const __c = customIcon('start');
-  if (__c) return <Custom url={__c} size={size} className={className} />;
+  const override = customIcon('start');
+  if (override) return <Custom url={override} size={size} className={className} />;
   return (
-    <Svg size={size} className={className}>
-      {(id) => <>
-        <defs>
-          <linearGradient id={id('a')} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#3BB4F8" />
-            <stop offset="1" stopColor="#0A6FD8" />
-          </linearGradient>
-        </defs>
-        <g fill={`url(#${id('a')})`}>
-          <rect x="3" y="3" width="20.5" height="20.5" rx="1.6" />
-          <rect x="24.5" y="3" width="20.5" height="20.5" rx="1.6" />
-          <rect x="3" y="24.5" width="20.5" height="20.5" rx="1.6" />
-          <rect x="24.5" y="24.5" width="20.5" height="20.5" rx="1.6" />
-        </g>
-      </>}
-    </Svg>
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path fill="#0078d4" d="M0 0h11v11H0zM13 0h11v11H13zM0 13h11v11H0zM13 13h11v11H13z" />
+    </svg>
   );
 }
 
