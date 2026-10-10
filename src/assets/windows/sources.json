@@ -10,7 +10,8 @@
       256
     ],
     "bundledFile": "edge.png",
-    "bundledSha256": "ad66139ca3b96a1be6c2a38fa3c2f392c41d1324292fbce2d6db9f8de84728c6"
+    "bundledSha256": "ad66139ca3b96a1be6c2a38fa3c2f392c41d1324292fbce2d6db9f8de84728c6",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "explorer",
@@ -23,7 +24,8 @@
       256
     ],
     "bundledFile": "explorer.png",
-    "bundledSha256": "995c805df0a5f4b0933720599c7282b602b9889ab4d07a28348f6618915d7d2e"
+    "bundledSha256": "995c805df0a5f4b0933720599c7282b602b9889ab4d07a28348f6618915d7d2e",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "settings",
@@ -36,7 +38,8 @@
       256
     ],
     "bundledFile": "settings.png",
-    "bundledSha256": "ea6ce72dbcf5e27923c6aac4b879892e18a978dc4357d64f9670a2b4b4066277"
+    "bundledSha256": "ea6ce72dbcf5e27923c6aac4b879892e18a978dc4357d64f9670a2b4b4066277",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "notepad",
@@ -49,7 +52,8 @@
       256
     ],
     "bundledFile": "notepad.png",
-    "bundledSha256": "5646287594605cb3781f76513c56e720862460248fe0946c89cc9207f6c9893d"
+    "bundledSha256": "5646287594605cb3781f76513c56e720862460248fe0946c89cc9207f6c9893d",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "paint",
@@ -62,7 +66,8 @@
       256
     ],
     "bundledFile": "paint.png",
-    "bundledSha256": "81144f44c8440015476ff47ed21fdf8dd182f672a5afe3635a48e989b525bee3"
+    "bundledSha256": "81144f44c8440015476ff47ed21fdf8dd182f672a5afe3635a48e989b525bee3",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "photos",
@@ -75,7 +80,8 @@
       256
     ],
     "bundledFile": "photos.png",
-    "bundledSha256": "b788bef17767c932ad927ff1fe16acfac359bc6a88c56c1d2b19437ee1ccf21d"
+    "bundledSha256": "b788bef17767c932ad927ff1fe16acfac359bc6a88c56c1d2b19437ee1ccf21d",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "mediaplayer",
@@ -88,7 +94,8 @@
       256
     ],
     "bundledFile": "mediaplayer.png",
-    "bundledSha256": "72f0f602335de10962a4a2be5e82c88590ac1d7d1ebea4789acb822c76bdef12"
+    "bundledSha256": "72f0f602335de10962a4a2be5e82c88590ac1d7d1ebea4789acb822c76bdef12",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "clock",
@@ -101,7 +108,8 @@
       256
     ],
     "bundledFile": "clock.png",
-    "bundledSha256": "aaee22daf4e0a19a460d1607b7d6436f5c450935360a00f2739f92a56e26bd11"
+    "bundledSha256": "aaee22daf4e0a19a460d1607b7d6436f5c450935360a00f2739f92a56e26bd11",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "weather",
@@ -114,7 +122,8 @@
       256
     ],
     "bundledFile": "weather.png",
-    "bundledSha256": "5abd9036d7310565c378c93bd544a2536debcc5b96a4710697e883ea9615a58a"
+    "bundledSha256": "5abd9036d7310565c378c93bd544a2536debcc5b96a4710697e883ea9615a58a",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "taskmgr",
@@ -127,7 +136,8 @@
       256
     ],
     "bundledFile": "taskmgr.png",
-    "bundledSha256": "2d92504e9a2fed45146d44e4ca381a486f5dfaea481903985c59be7b82d2d0e4"
+    "bundledSha256": "2d92504e9a2fed45146d44e4ca381a486f5dfaea481903985c59be7b82d2d0e4",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "snippingtool",
@@ -140,7 +150,8 @@
       256
     ],
     "bundledFile": "snippingtool.png",
-    "bundledSha256": "ac4fd4d04294e6a65619a97d048ef33f5125bdfa993ef4335ee000c1c677492d"
+    "bundledSha256": "ac4fd4d04294e6a65619a97d048ef33f5125bdfa993ef4335ee000c1c677492d",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "todo",
@@ -153,7 +164,8 @@
       256
     ],
     "bundledFile": "todo.png",
-    "bundledSha256": "1c59c6caaecd3dc4a44975a2d8be2e4e214f9b5efd2cd8b7dff1e1a5a8a0dab2"
+    "bundledSha256": "1c59c6caaecd3dc4a44975a2d8be2e4e214f9b5efd2cd8b7dff1e1a5a8a0dab2",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "calendar",
@@ -166,7 +178,8 @@
       256
     ],
     "bundledFile": "calendar.png",
-    "bundledSha256": "19dcf4bab93888cb096c7b35c29e756c6d575f2e09f29f61bf23673c28e02ae3"
+    "bundledSha256": "19dcf4bab93888cb096c7b35c29e756c6d575f2e09f29f61bf23673c28e02ae3",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "store",
@@ -178,7 +191,8 @@
       192
     ],
     "bundledFile": "store.png",
-    "bundledSha256": "602aae201d293d99ccc4ebbf61064e5d0c62600064f3e9b7da0fd6f799a5fc8d"
+    "bundledSha256": "602aae201d293d99ccc4ebbf61064e5d0c62600064f3e9b7da0fd6f799a5fc8d",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
   },
   {
     "id": "camera",
@@ -190,7 +204,8 @@
       256
     ],
     "bundledFile": "camera.png",
-    "bundledSha256": "af663977e59af4f159e8f6c760c1e1af4ad10cb477061e0943b8e038090c36be"
+    "bundledSha256": "af663977e59af4f159e8f6c760c1e1af4ad10cb477061e0943b8e038090c36be",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
   },
   {
     "id": "terminal",
@@ -212,7 +227,8 @@
       256
     ],
     "bundledFile": "folder.png",
-    "bundledSha256": "8fef57b3303a9777a6b54bf6c3a07e15a2d5b29990e81031196b18e88b39f8fb"
+    "bundledSha256": "8fef57b3303a9777a6b54bf6c3a07e15a2d5b29990e81031196b18e88b39f8fb",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
   },
   {
     "id": "calculator",
@@ -221,7 +237,8 @@
     "path": "ICO/Apps (Windows 11)/Calculator.ico",
     "sha256": "4cc484c54cbae141a3031ae7e49468ff7f1ec6bec14708fd9139e864c1c4d3c1",
     "bundledFile": "calculator.png",
-    "bundledSha256": "13b9d5c26c854830e5b8e88295240c7a24c755d059089dbe9d3de03f3ff043d1"
+    "bundledSha256": "13b9d5c26c854830e5b8e88295240c7a24c755d059089dbe9d3de03f3ff043d1",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
   },
   {
     "id": "mail",
@@ -231,5 +248,339 @@
     "sha256": "165eb36d0e797b9ae0a49918605120addbb9220a51e0451b36f84db3acb2f129",
     "bundledFile": "mail.png",
     "bundledSha256": "165eb36d0e797b9ae0a49918605120addbb9220a51e0451b36f84db3acb2f129"
+  },
+  {
+    "id": "recycle-bin",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "objects/recyclebinempty-0.png",
+    "sha256": "ac7b8414cc748eccd59bcf2e9693c27fc8d13c94392a7988e8d2662a42170ff6",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "recycle-bin.png",
+    "bundledSha256": "357209eff4934e04e7d3d1a800fb7bd422bd56b51b2ab9f676fe9520bfdf9f50",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "recycle-bin-full",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "objects/recyclebinfull-0.png",
+    "sha256": "e5f72fd5db68484226f5cf1cbed718040a1261b4285ecd36e4e4f87ad8eeffea",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "recycle-bin-full.png",
+    "bundledSha256": "d68543c35460c1a5466b4467353522d810df35ad8990abe2599d78b655348ed9",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-desktop",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/desktop-0.png",
+    "sha256": "c6b620bbdd618286b92e6c767ed50c0f0f4a07ff7c818e51aa3e7319815bb567",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-desktop.png",
+    "bundledSha256": "9d83cf9a160990919ce8d5ca397247a62a5638822b534f8d84d10a2d065c594d",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-documents",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/documents-0.png",
+    "sha256": "2faef167300eed13784e20d040fa10bce85135250ec6a1cb89dd2f132a4da8c2",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-documents.png",
+    "bundledSha256": "ab3a8dd2a35ef9e704c5b2dce75a91f787a7100352343b73d7babe9470e4633d",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-downloads",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/downloads-0.png",
+    "sha256": "674d26a7b1936fcbaee83f0cef70ff1e83aa8c8bb06386eb3c5a7dcf000df811",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-downloads.png",
+    "bundledSha256": "f602ef57b0b6018d0051c2f74e903bbb99e2a9786dd33b756d1c55327c742627",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-music",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/music-0.png",
+    "sha256": "aebe0b1cabcf3613911cfb33fb2abd9ca86cee9e169b5dcb295f7cd46c1376c5",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-music.png",
+    "bundledSha256": "4fab409b4a0d911846c1a6e0c991cd6d3778f1caf81693a0a5056f1f89946cbf",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-pictures",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/pictures-0.png",
+    "sha256": "013a7eb94d15842fd9368e33b1b933fbee211faee5c23570d8b97ff7698882c7",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-pictures.png",
+    "bundledSha256": "f892579770abd33abc35a0940c5f026b2481e7416d5150bf920d16bb74cb1a9d",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-videos",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/videos-0.png",
+    "sha256": "8688f04aaa75b961637c9ff792b1bea2c23e63e19de224213f80db6634d576dc",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-videos.png",
+    "bundledSha256": "1382e837bed8a53f02d6d8e3aa46b3766667e0e786f717239ef8208db943c7b3",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "folder-user",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/user-0.png",
+    "sha256": "8cc04bc6d60c9d221fdfab19eb5c89db8a3a7cd77e81d5e0aa5c0435be3fa9ad",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "folder-user.png",
+    "bundledSha256": "844d2ef2c969647f912042f28dee872db1558734be7ec9d5ea6c359d85195f8a",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "home",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Home.ico",
+    "sha256": "c9ee0d4ca34efe675d3320d72fe1c5b2f0a09abfb5c9d2e9d44ab5e1eca62b28",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "home.png",
+    "bundledSha256": "b32b6d2deb4828adb9a3581992d9d12d72c52d6ddfc39701bdb9378ebf4864d3",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "gallery",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Gallery.ico",
+    "sha256": "fa723afda2050026a21ee24e1915fd3869b8d3560e7d8514baeb114f53423e75",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "gallery.png",
+    "bundledSha256": "7c0a31224bf772df5b84d0b6c055fbf6fe9c62e9a498df7aecf294d2e1a3f0eb",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "control-panel",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Apps (Windows 11)/Control Panel (win 11).ico",
+    "sha256": "6fdfb24a0e147ceabab65b4b47c18f50f73cf26b1e37f5693300ceac3af03627",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "control-panel.png",
+    "bundledSha256": "aebca926eb478ac78112bfe2ade4bce13ebb7567503f4ed54e6c189a2776fa90",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "file-text",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/text-0.png",
+    "sha256": "31d1ae41e443134bd2a089a4998e95d39f0706c276b3453ed5dbdc2668322943",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-text.png",
+    "bundledSha256": "8a560040425332691a393e087146d445de6c6d5a12d3025aa490cc3c4ff2e64b",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-image",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/image-0.png",
+    "sha256": "7910522ad5059fb9aa321f4c59826772e0665cac49782c58d5a5e51ca02b017b",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-image.png",
+    "bundledSha256": "fe6c648bd67948f70fcf956392723f4e1e36d4ca06c8cb5d7d0c7ca46b8322e2",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-audio",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/audio-0.png",
+    "sha256": "9f26738ead9cb89c855202e21b19a7ec2955f56b52aef7d8f54e7bb466225692",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-audio.png",
+    "bundledSha256": "7e87e1fe71a072a9983dea679ad3d6882e87ae9274e0af9e33b20a93816f6406",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-video",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/video-0.png",
+    "sha256": "9f839cebd59147e56a17c40c5a15f39e34795f1366a6a4c52fa464dde5b127cc",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-video.png",
+    "bundledSha256": "e06a38420c23753fbf527d0c77aad5194be27012851caafc4fe286225c493116",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-exe",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/windowexecutable-0.png",
+    "sha256": "dfd4f3db3e79f1268e0dcf3fbde7f3598093458d6d9d709a3775a9c4317d6f1e",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-exe.png",
+    "bundledSha256": "f58143ef03a751ba611b79bb7dbf8a83ac6459f06696a8e8d3fabcf75c1576f9",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-generic",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "files/generic-0.png",
+    "sha256": "5caa9f8d0c40851685523154c5c06b270f98c52da1905753e5aa26af8434b32c",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-generic.png",
+    "bundledSha256": "26a8c89d50ac1f7bd53ed52bd09ed1d36c3cf7f6a1baeb4691658c2502968064",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "file-zip",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "folders/zip-0.png",
+    "sha256": "e228474436332b37f3a2eb6bb06c0d1c7c4e0b5ca6e19e35e561d76596a35276",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "file-zip.png",
+    "bundledSha256": "b3f6801c86776faa2128362baa7ca763fdf641b8645a26481b8a3fb7964f9a37",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "shortcut",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Overlay (Windows 11)/Shortcut.ico",
+    "sha256": "7988b8a57024258e26b1c5493c3df28b548a50a7389473e48db2fdf39d1e8265",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "shortcut.png",
+    "bundledSha256": "251f53e62ba449d1488321000b6b0b90a9e503b08a9d655bf1fa1e6c68a04339",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "drive",
+    "repository": "FadeMind/W-ICO",
+    "branch": "master",
+    "path": "ICO/Drive (Windows 11)/Base.ico",
+    "sha256": "4de01efad60e41c42d1a795a48d8faad4019b4f45def19238fc64576a1bd3cec",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "drive.png",
+    "bundledSha256": "5dc68cc1bbb4251073acfecc9a6767fec284cc83000e48c19b6b3c037652f4d9",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "taskview",
+    "repository": "hesphoros/windows11-icons",
+    "branch": "main",
+    "path": "applications/taskview-0.png",
+    "sha256": "4708ba8c100ed7060bca4527eb8d0ab14a740f66dfe2af63af8ecedbe52dbde4",
+    "size": [
+      256,
+      256
+    ],
+    "bundledFile": "taskview.png",
+    "bundledSha256": "c5154d5f66c97121ae3c03aa8697789c2ff713c17c9f95b5eb40c2d698e86f8e",
+    "revision": "cde80035d188a90f4cc684bcb835876e7ef6b992"
+  },
+  {
+    "id": "network",
+    "repository": "FadeMind/W-ICO",
+    "path": "ICO/Apps (Windows 11)/imageres_25.ico",
+    "sha256": "5027a23f4279f0d257d4c7ddc5b3d88770d8efad856506bc63f31f35e80b57da",
+    "bundledFile": "network.png",
+    "bundledSha256": "8037dfc49506b273a01ab7f592fe730ddeb4727eac52a3c9dea6892da7714c0d",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "drive-system",
+    "repository": "FadeMind/W-ICO",
+    "path": "ICO/Drive (Windows 11)/Windows 11/(C) Drive - 11.ico",
+    "sha256": "813a859a3f050b55d612b3e2a3ae4de0b246ebbffc563045f0df90b3f15e64ae",
+    "bundledFile": "drive-system.png",
+    "bundledSha256": "9d6d5830f69a6a04043f4eaea33fb20cf7c28870362d38840739372f7c020e32",
+    "revision": "b5fffb56f4d55bf0b836206ae899a6aa75a7db45"
+  },
+  {
+    "id": "this-pc",
+    "repository": "SN7k/windows11-portfolio",
+    "path": "public/img/icons/computer.png",
+    "sha256": "3f80d10aee4fa9be423aa13a7bd8aa36487c815c434162d933feaf254dfae5a0",
+    "bundledFile": "this-pc.png",
+    "bundledSha256": "3f80d10aee4fa9be423aa13a7bd8aa36487c815c434162d933feaf254dfae5a0"
   }
 ]
