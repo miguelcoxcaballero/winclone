@@ -4,6 +4,7 @@
  */
 import { useId, type ComponentType, type ReactNode } from 'react';
 import type { AppIconProps } from '@/core/types';
+import { CUSTOM_ICONS } from '@/core/customAssets';
 
 type Defs = (id: (n: string) => string) => ReactNode;
 
@@ -31,6 +32,7 @@ const rg = (id: string, stops: [string, string][], cx = 0.5, cy = 0.5, r = 0.5) 
 
 /* ───────────────────────── Folder (generic) ───────────────────────── */
 export function FolderIcon({ size, className, badge }: AppIconProps & { badge?: ReactNode }) {
+  if (CUSTOM_ICONS.folder && !badge) return <img src={CUSTOM_ICONS.folder} width={size ?? 24} height={size ?? 24} className={className} alt="" draggable={false} style={{ objectFit: 'contain' }} />;
   return (
     <Icon size={size} className={className}
       defs={(id) => <>
@@ -432,6 +434,16 @@ export const APP_ICONS: Record<string, ComponentType<AppIconProps>> = {
   winver: Info,
   generic: Generic,
 };
+
+/** Renders a locally supplied icon file (see core/customAssets.ts). */
+export function imageIcon(url: string): ComponentType<AppIconProps> {
+  return function ImageIcon({ size = 24, className }: AppIconProps) {
+    return <img src={url} width={size} height={size} className={className} alt="" draggable={false} style={{ objectFit: 'contain' }} />;
+  };
+}
+Object.keys(APP_ICONS).forEach((id) => {
+  if (CUSTOM_ICONS[id]) APP_ICONS[id] = imageIcon(CUSTOM_ICONS[id]);
+});
 
 export function AppIcon({ appId, size = 24, className }: { appId: string; size?: number; className?: string }) {
   const C = APP_ICONS[appId] ?? Generic;

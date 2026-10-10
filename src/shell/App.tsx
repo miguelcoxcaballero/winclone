@@ -102,7 +102,8 @@ export function App() {
     return () => window.removeEventListener('contextmenu', h);
   }, []);
 
-  const desktopVisible = phase === 'desktop' || phase === 'locking' || phase === 'signing-out' || phase === 'shutting-down' || phase === 'restarting' || phase === 'lock' || phase === 'login' || phase === 'signing-in';
+  // The session (desktop + windows) stays mounted behind the lock / login / sleep screens.
+  const desktopVisible = phase !== 'boot' && phase !== 'off';
 
   return (
     <div className={`shell phase-${phase}`}>

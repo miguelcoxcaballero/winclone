@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { DEFAULT_WALLPAPER_ID, DEFAULT_LOCK_WALLPAPER_ID } from '../wallpapers';
 
 export type Wallpaper =
   | { type: 'image'; id: string }
@@ -101,9 +102,9 @@ export const DEFAULT_SETTINGS = {
   animations: true,
   accentOnStartTaskbar: false,
   accentOnTitleBars: false,
-  wallpaper: { type: 'image', id: 'flow-light' } as Wallpaper,
+  wallpaper: { type: 'image', id: DEFAULT_WALLPAPER_ID } as Wallpaper,
   wallpaperFit: 'fill' as const,
-  lockWallpaper: 'lock-ridge',
+  lockWallpaper: DEFAULT_LOCK_WALLPAPER_ID,
   recentWallpapers: ['flow-light', 'flow-dark', 'glow', 'aurora', 'dune'],
 
   taskbarAlign: 'center' as const,

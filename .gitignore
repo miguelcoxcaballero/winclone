@@ -3,3 +3,6 @@ dist
 *.log
 .DS_Store
 /screenshots
+# Locally supplied assets (see src/custom-assets/README.md)
+src/custom-assets/*
+!src/custom-assets/README.md

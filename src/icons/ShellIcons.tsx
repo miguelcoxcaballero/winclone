@@ -4,6 +4,11 @@ import { FolderIcon } from './AppIcons';
 import type { FSNode } from '@/core/store/fs';
 import { fileKind, extOf, FS } from '@/core/store/fs';
 import { AppIcon } from './AppIcons';
+import { customIcon } from '@/core/customAssets';
+
+function Custom({ url, size = 24, className }: { url: string; size?: number; className?: string }) {
+  return <img src={url} width={size} height={size} className={className} alt="" draggable={false} style={{ objectFit: 'contain' }} />;
+}
 
 interface P { size?: number; className?: string }
 
@@ -18,6 +23,8 @@ function Svg({ size = 24, className, children }: P & { children: (id: (n: string
 
 /* ── Start glyph: four rounded tiles ── */
 export function StartGlyph({ size = 24, className }: P) {
+  const __c = customIcon('start');
+  if (__c) return <Custom url={__c} size={size} className={className} />;
   return (
     <Svg size={size} className={className}>
       {(id) => <>
@@ -40,6 +47,8 @@ export function StartGlyph({ size = 24, className }: P) {
 
 /* ── Recycle bin ── */
 export function RecycleBinIcon({ size, className, full }: P & { full?: boolean }) {
+  const __c = (full && customIcon('recycle-bin-full')) || customIcon('recycle-bin');
+  if (__c) return <Custom url={__c} size={size} className={className} />;
   return (
     <Svg size={size} className={className}>
       {(id) => <>
@@ -72,6 +81,8 @@ export function RecycleBinIcon({ size, className, full }: P & { full?: boolean }
 
 /* ── This PC (monitor) ── */
 export function ThisPCIcon({ size, className }: P) {
+  const __c = customIcon('this-pc');
+  if (__c) return <Custom url={__c} size={size} className={className} />;
   return (
     <Svg size={size} className={className}>
       {(id) => <>
@@ -93,6 +104,8 @@ export function ThisPCIcon({ size, className }: P) {
 
 /* ── Network ── */
 export function NetworkIcon({ size, className }: P) {
+  const __c = customIcon('network');
+  if (__c) return <Custom url={__c} size={size} className={className} />;
   return (
     <Svg size={size} className={className}>
       {() => <>
@@ -133,6 +146,8 @@ export function AvatarIcon({ size = 32, className }: P) {
 
 /* ── Drive ── */
 export function DriveIcon({ size, className, system }: P & { system?: boolean }) {
+  const __c = customIcon('drive');
+  if (__c) return <Custom url={__c} size={size} className={className} />;
   return (
     <Svg size={size} className={className}>
       {(id) => <>
